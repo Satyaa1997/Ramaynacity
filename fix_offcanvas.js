@@ -22,7 +22,7 @@ const cleanOffcanvas = `  <!--===== MOBILE OFFCANVAS =======-->
           <h3 class="vl-offcanvas-sm-title">Contact Us</h3>
           <div class="space20"></div>
           <span><a href="mailto:info@ramayanacity.com"><i class="fa-regular fa-envelope"></i> info@ramayanacity.com</a></span>
-          <span><a href="tel:+917084222114"><i class="fa-solid fa-phone"></i> +91-7084222114</a></span>
+          <span><a href="tel:+918882125125"><i class="fa-solid fa-phone"></i> +91-8882125125</a></span>
           <span><a href="#"><i class="fa-solid fa-location-dot"></i> <strong>Site:</strong> NH-56B, Khatola Village, Sarojini Nagar, Lucknow, U.P.</a></span>
           <span><a href="#"><i class="fa-solid fa-building"></i> <strong>Office:</strong> 309, 3rd Floor, Felix Square, Sushant Golf City, Lucknow - 226030</a></span>
         </div>
