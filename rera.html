@@ -39,6 +39,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/floating-buttons.css">
 
 
   <style>
@@ -755,18 +756,23 @@
 <body>
 
   <!-- Floating Buttons -->
-  <a href="tel:+918882125125">
-    <button class="btn-floating phone">
-      <img src="https://i.imgur.com/FZuns9L.png" alt="Phone">
-      <span>+91-8882125125</span>
-    </button>
+  <!-- Floating Luxury Contact Buttons -->
+  <a href="tel:+918882125125" class="btn-floating phone" aria-label="Call +91-8882125125">
+    <div class="btn-icon-wrap">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+    </div>
+    <span>+91-8882125125</span>
   </a>
 
-  <a href="https://api.whatsapp.com/send?phone=918882125125" target="_blank">
-    <button class="btn-floating whatsapp">
-      <img src="https://i.imgur.com/LBW2Lso.png" alt="WhatsApp">
-      <span>+91-8882125125</span>
-    </button>
+  <a href="https://api.whatsapp.com/send?phone=918882125125" target="_blank" rel="noopener noreferrer" class="btn-floating whatsapp" aria-label="Chat on WhatsApp">
+    <div class="btn-icon-wrap">
+      <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor">
+        <path d="M16 2a13.9 13.9 0 0 0-12 21L2 30l7.2-1.9A13.9 13.9 0 1 0 16 2zm0 25.5a11.6 11.6 0 0 1-5.9-1.6l-.4-.3-4.4 1.1 1.2-4.3-.3-.4a11.6 11.6 0 1 1 9.8 5.5zm6.4-8.6c-.4-.2-2.1-1-2.4-1.2-.3-.1-.6-.2-.8.2s-1 1.2-1.2 1.5c-.2.2-.5.3-.8.1a10.3 10.3 0 0 1-5.3-4.6c-.4-.7.4-.7 1.1-2.1.1-.3.1-.5 0-.7s-.8-2-1.1-2.7c-.3-.7-.6-.6-.8-.6h-.7c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.5 4 1.7 4.2c.2.3 2.9 4.4 7 6.2 1 .4 1.8.7 2.4.9 1 .3 1.9.3 2.7.2.8-.1 2.5-1 2.8-2 .4-.9.4-1.8.3-2-.1-.2-.4-.3-.8-.5z"/>
+      </svg>
+    </div>
+    <span>WhatsApp Us</span>
   </a>
 
   <!-- HEADER -->

@@ -1,0 +1,247 @@
+/* ========================================================
+   RAMAYANA CITY - LUXURY FLOATING WHATSAPP & CALL BUTTONS
+   ======================================================== */
+
+.btn-floating,
+.floating-btn {
+  position: fixed !important;
+  right: 25px !important;
+  left: auto !important;
+  z-index: 1040 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 54px !important;
+  border: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  overflow: hidden !important;
+  text-decoration: none !important;
+  box-sizing: border-box !important;
+  transition: width 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.25s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+}
+
+/* Icon Container - Perfectly Centered in 54px Circle */
+.btn-floating .btn-icon-wrap,
+.floating-btn .floating-btn-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 54px !important;
+  height: 54px !important;
+  min-width: 54px !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+
+.btn-floating svg,
+.floating-btn svg,
+.btn-floating i,
+.floating-btn i {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.3s ease !important;
+}
+
+/* Text Label inside Expanded Pill */
+.btn-floating span,
+.floating-btn span {
+  display: none !important;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+  padding-right: 18px !important;
+  letter-spacing: 0.3px !important;
+  user-select: none !important;
+}
+
+/* --------------------------------------------------------
+   1. WHATSAPP BUTTON (Luxury Emerald Gradient & Pulse)
+   -------------------------------------------------------- */
+.btn-floating.whatsapp,
+.floating-btn.floating-btn-whatsapp {
+  bottom: 24px !important;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+  animation: pulseWhatsApp 3s infinite !important;
+}
+
+.btn-floating.whatsapp svg,
+.floating-btn.floating-btn-whatsapp svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  width: 27px !important;
+  height: 27px !important;
+}
+
+.btn-floating.whatsapp span,
+.floating-btn.floating-btn-whatsapp span {
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------
+   2. CALL BUTTON (Ramayana City Royal Gold Gradient & Pulse)
+   -------------------------------------------------------- */
+.btn-floating.phone,
+.floating-btn.floating-btn-call {
+  bottom: 90px !important;
+  background: linear-gradient(135deg, #C9A84C 0%, #F5DE98 45%, #B8860B 100%) !important;
+  color: #1A1815 !important;
+  box-shadow: 0 6px 20px rgba(201, 168, 76, 0.45), 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+  animation: pulseCall 3s infinite 1.5s !important;
+}
+
+.btn-floating.phone svg,
+.floating-btn.floating-btn-call svg {
+  color: #1A1815 !important;
+  fill: #1A1815 !important;
+  width: 23px !important;
+  height: 23px !important;
+}
+
+.btn-floating.phone span,
+.floating-btn.floating-btn-call span {
+  color: #1A1815 !important;
+}
+
+/* --------------------------------------------------------
+   3. PULSE & GLOW KEYFRAMES
+   -------------------------------------------------------- */
+@keyframes pulseWhatsApp {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6), 0 6px 20px rgba(37, 211, 102, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0), 0 6px 20px rgba(37, 211, 102, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 6px 20px rgba(37, 211, 102, 0.4);
+  }
+}
+
+@keyframes pulseCall {
+  0% {
+    box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.6), 0 6px 20px rgba(201, 168, 76, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(201, 168, 76, 0), 0 6px 20px rgba(201, 168, 76, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(201, 168, 76, 0), 0 6px 20px rgba(201, 168, 76, 0.4);
+  }
+}
+
+/* --------------------------------------------------------
+   4. DESKTOP HOVER EXPANSION
+   -------------------------------------------------------- */
+@media (hover: hover) and (min-width: 769px) {
+  .btn-floating:hover,
+  .floating-btn:hover {
+    width: 205px !important;
+    animation: none !important;
+    transform: translateY(-3px) scale(1.02) !important;
+  }
+
+  .btn-floating.whatsapp:hover,
+  .floating-btn.floating-btn-whatsapp:hover {
+    box-shadow: 0 10px 28px rgba(37, 211, 102, 0.55), 0 4px 10px rgba(0, 0, 0, 0.18) !important;
+  }
+
+  .btn-floating.phone:hover,
+  .floating-btn.floating-btn-call:hover {
+    box-shadow: 0 10px 28px rgba(201, 168, 76, 0.55), 0 4px 10px rgba(0, 0, 0, 0.18) !important;
+  }
+
+  .btn-floating:hover svg,
+  .floating-btn:hover svg {
+    transform: scale(1.12) rotate(6deg) !important;
+  }
+
+  .btn-floating:hover span,
+  .floating-btn:hover span {
+    display: inline-block !important;
+    animation: fadeInText 0.25s ease-forward !important;
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateX(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* --------------------------------------------------------
+   5. MOBILE & TABLET RESPONSIVENESS
+   -------------------------------------------------------- */
+@media (max-width: 768px) {
+  .btn-floating,
+  .floating-btn {
+    right: 18px !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50px !important;
+  }
+
+  .btn-floating .btn-icon-wrap,
+  .floating-btn .floating-btn-icon {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+  }
+
+  .btn-floating.whatsapp,
+  .floating-btn.floating-btn-whatsapp {
+    bottom: 20px !important;
+  }
+
+  .btn-floating.phone,
+  .floating-btn.floating-btn-call {
+    bottom: 80px !important;
+  }
+
+  .btn-floating.whatsapp svg,
+  .floating-btn.floating-btn-whatsapp svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .btn-floating.phone svg,
+  .floating-btn.floating-btn-call svg {
+    width: 21px !important;
+    height: 21px !important;
+  }
+
+  /* On mobile, keep button as compact circle (prevent sticky hover) */
+  .btn-floating:hover,
+  .floating-btn:hover {
+    width: 50px !important;
+  }
+
+  .btn-floating span,
+  .floating-btn span {
+    display: none !important;
+  }
+}
+
+/* Tactile Active/Tap State */
+.btn-floating:active,
+.floating-btn:active {
+  transform: scale(0.9) !important;
+}
