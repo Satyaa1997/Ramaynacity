@@ -47,6 +47,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/floating-buttons.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
   <style>
     .inner-header-area {
       position: relative;
@@ -868,15 +869,16 @@
     <span>WhatsApp Us</span>
   </a>
 
+    <!--=====HEADER START=======-->
   <header class="homepage2-body">
-    <div id="vl-header-sticky" class="vl-header-area vl-inner-solid-header">
+    <div id="vl-header-sticky" class="vl-header-area">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-2 col-md-6 col-6">
             <div class="vl-logo">
               <a href="index.html">
-                <img src="assets/img/logo/logo1.png" class="logo" alt="Ramayana City"
-                  style="object-fit:contain;max-height:60px;">
+                <img src="assets/img/logo/logo1.png" class="logo default-logo" alt="Ramayana City">
+                <img src="assets/img/logo/logo1.png" class="logo sticky-logo" alt="Ramayana City">
               </a>
             </div>
           </div>
@@ -885,25 +887,24 @@
               <nav class="vl-mobile-menu-active">
                 <ul>
                   <li><a href="index.html">Home</a></li>
-                  <li><a href="about-us.html">About Us</a></li>
-                  <li><a href="index.html#masterplan">Project Map</a></li>
+                  <li><a href="about-us.html">About</a></li>
+                  <li><a href="index.html#masterplan">Project</a></li>
                   <li><a href="index.html#amenities">Amenities</a></li>
                   <li class="has-dropdown">
-                    <a href="gallery.html">Gallery <span><i
-                          class="fa-solid fa-angle-down d-lg-inline d-none"></i></span></a>
+                    <a href="gallery.html">Gallery <span><i class="fa-solid fa-angle-down d-lg-inline d-none"></i></span></a>
                     <ul class="sub-menu">
                       <li><a href="gallery.html">Photo Gallery</a></li>
                       <li><a href="news-gallery.html">Video Gallery</a></li>
                     </ul>
                   </li>
+                  <li><a href="index.html#why-choose">Why Choose</a></li>
                   <li><a href="index.html#location">Location</a></li>
-                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><a href="contact.html">Contact</a></li>
                 </ul>
               </nav>
               <div class="vl-hero-btn d-none d-lg-block">
                 <div class="btn-area1">
-                  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#enquiryModal" class="vl-btn1"
-                    style="background:linear-gradient(135deg,#C9A84C 0%,#E8D08A 50%,#C9A84C 100%)!important;color:#0D0D0D!important;padding:14px 24px;">
+                  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#enquiryModal" class="vl-btn1">
                     Enquiry Now <i class="fa-solid fa-arrow-right"></i>
                   </a>
                 </div>
@@ -912,13 +913,16 @@
           </div>
           <div class="col-md-6 col-6 d-lg-none d-block">
             <div class="vl-header-action-item text-end">
-              <button type="button" class="vl-offcanvas-toggle"><i class="fa-solid fa-bars-staggered"></i></button>
+              <button type="button" class="vl-offcanvas-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars-staggered"></i>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </header>
+  <!--=====HEADER END =======-->
   <!--=====HEADER END =======-->
   <!--===== MOBILE OFFCANVAS =======-->
   <div class="homepage2-body">

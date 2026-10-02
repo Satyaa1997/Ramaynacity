@@ -1,0 +1,371 @@
+/* ==========================================================================
+   RAMAYANA CITY - MODERN LUXURY NAVBAR STYLING
+   ========================================================================== */
+
+/* 1. Header Wrapper Base Styles */
+.vl-header-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 16px 0;
+  transition: all 0.35s ease;
+  background: transparent;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.vl-header-area .container,
+.vl-header-area .row {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* 2. Logo Area */
+.vl-logo {
+  display: flex;
+  align-items: center;
+}
+
+.vl-logo a {
+  display: inline-block;
+  line-height: 1;
+}
+
+.vl-logo img {
+  max-height: 48px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.vl-logo a:hover img {
+  transform: scale(1.02);
+}
+
+.default-logo {
+  display: inline-block !important;
+}
+
+.sticky-logo {
+  display: none !important;
+}
+
+/* 3. Main Menu Wrapper */
+.vl-main-menu {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+/* 4. Nav & Menu List */
+.vl-main-menu nav.vl-mobile-menu-active {
+  display: flex !important;
+  align-items: center !important;
+  flex: 1 1 auto !important;
+  margin-left: clamp(12px, 1.8vw, 32px) !important;
+}
+
+.vl-main-menu nav.vl-mobile-menu-active > ul {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: clamp(10px, 1.3vw, 22px) !important;
+}
+
+.vl-main-menu nav.vl-mobile-menu-active > ul > li {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+}
+
+/* Remove legacy pipe separators & stray pseudo-elements */
+.vl-main-menu ul li:not(:last-child) a::after,
+.vl-main-menu ul li a::after,
+.vl-main-menu ul li a::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* Menu Anchor Links */
+.vl-main-menu nav.vl-mobile-menu-active > ul > li > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(12.5px, 0.92vw, 14.5px) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  padding: 8px 4px !important;
+  line-height: 1.2 !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+  transition: color 0.25s ease, transform 0.2s ease !important;
+  position: relative !important;
+}
+
+.vl-main-menu nav.vl-mobile-menu-active > ul > li > a:hover {
+  color: #C9A84C !important;
+  transform: translateY(-1px);
+}
+
+.vl-main-menu nav.vl-mobile-menu-active > ul > li > a span i {
+  font-size: 11px !important;
+  transition: transform 0.25s ease;
+}
+
+.vl-main-menu nav.vl-mobile-menu-active > ul > li:hover > a span i {
+  transform: rotate(180deg);
+}
+
+/* 5. Dropdown Sub-menu */
+.vl-main-menu ul > li .sub-menu {
+  position: absolute !important;
+  top: calc(100% + 12px) !important;
+  left: 0 !important;
+  width: 200px !important;
+  background: #161513 !important;
+  border: 1px solid rgba(201, 168, 76, 0.4) !important;
+  border-top: 3px solid #C9A84C !important;
+  border-radius: 8px !important;
+  padding: 10px 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(10px) !important;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease !important;
+  pointer-events: none !important;
+  z-index: 9999 !important;
+}
+
+.vl-main-menu ul > li:hover > .sub-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+.vl-main-menu ul > li .sub-menu li {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.vl-main-menu ul > li .sub-menu li a {
+  display: block !important;
+  padding: 9px 20px !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  text-shadow: none !important;
+  text-transform: capitalize !important;
+  letter-spacing: 0.2px !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  background: transparent !important;
+}
+
+.vl-main-menu ul > li .sub-menu li a:hover {
+  background: rgba(201, 168, 76, 0.12) !important;
+  color: #C9A84C !important;
+  padding-left: 24px !important;
+}
+
+/* 6. ENQUIRY NOW Button */
+.vl-hero-btn {
+  margin-left: auto !important;
+  flex-shrink: 0 !important;
+  padding-left: clamp(16px, 2vw, 36px) !important;
+}
+
+.vl-hero-btn .btn-area1 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.vl-hero-btn .vl-btn1 {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background: linear-gradient(135deg, #C9A84C 0%, #E8D08A 50%, #C9A84C 100%) !important;
+  color: #0D0D0D !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: clamp(12px, 0.85vw, 13.5px) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.6px !important;
+  padding: clamp(9px, 0.8vw, 12px) clamp(16px, 1.3vw, 24px) !important;
+  border-radius: 50px !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.35) !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.vl-hero-btn .vl-btn1:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 22px rgba(201, 168, 76, 0.55) !important;
+  background: linear-gradient(135deg, #D4B457 0%, #F0D998 50%, #D4B457 100%) !important;
+  color: #000000 !important;
+}
+
+.vl-hero-btn .vl-btn1 i {
+  font-size: 11px !important;
+  transition: transform 0.25s ease !important;
+}
+
+.vl-hero-btn .vl-btn1:hover i {
+  transform: translateX(3px) !important;
+}
+
+/* 7. Sticky Header State */
+.vl-header-area.is-sticky,
+.vl-header-area.header-sticky {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.08) !important;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.3) !important;
+  padding: 10px 0 !important;
+  animation: fadeInDown 0.35s ease !important;
+}
+
+.vl-header-area.is-sticky .vl-main-menu nav.vl-mobile-menu-active > ul > li > a,
+.vl-header-area.header-sticky .vl-main-menu nav.vl-mobile-menu-active > ul > li > a {
+  color: #1A1815 !important;
+  text-shadow: none !important;
+}
+
+.vl-header-area.is-sticky .vl-main-menu nav.vl-mobile-menu-active > ul > li > a:hover,
+.vl-header-area.header-sticky .vl-main-menu nav.vl-mobile-menu-active > ul > li > a:hover {
+  color: #C9A84C !important;
+}
+
+.vl-header-area.is-sticky .default-logo,
+.vl-header-area.header-sticky .default-logo {
+  display: none !important;
+}
+
+.vl-header-area.is-sticky .sticky-logo,
+.vl-header-area.header-sticky .sticky-logo {
+  display: inline-block !important;
+}
+
+.vl-header-area.is-sticky .vl-offcanvas-toggle,
+.vl-header-area.header-sticky .vl-offcanvas-toggle {
+  color: #1A1815 !important;
+}
+
+/* 8. Inner Solid Header (for subpages) */
+body:not(.is-homepage) .vl-header-area,
+.vl-inner-solid-header {
+  position: relative !important;
+  background: #ffffff !important;
+  border-bottom: 2px solid #C9A84C !important;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.06) !important;
+  padding: 12px 0 !important;
+}
+
+body:not(.is-homepage) .vl-header-area .vl-main-menu nav.vl-mobile-menu-active > ul > li > a,
+.vl-inner-solid-header .vl-main-menu nav.vl-mobile-menu-active > ul > li > a {
+  color: #1A1815 !important;
+  text-shadow: none !important;
+}
+
+body:not(.is-homepage) .vl-header-area .vl-main-menu nav.vl-mobile-menu-active > ul > li > a:hover,
+.vl-inner-solid-header .vl-main-menu nav.vl-mobile-menu-active > ul > li > a:hover {
+  color: #C9A84C !important;
+}
+
+body:not(.is-homepage) .vl-header-area.is-sticky,
+body:not(.is-homepage) .vl-header-area.header-sticky,
+.vl-inner-solid-header.is-sticky,
+.vl-inner-solid-header.header-sticky {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.12) !important;
+  border-bottom: 2px solid #C9A84C !important;
+  padding: 10px 0 !important;
+}
+
+/* 9. Responsive Adjustments across Desktop Breakpoints */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .vl-main-menu nav.vl-mobile-menu-active {
+    margin-left: 10px !important;
+  }
+  .vl-main-menu nav.vl-mobile-menu-active > ul {
+    gap: 10px !important;
+  }
+  .vl-main-menu nav.vl-mobile-menu-active > ul > li > a {
+    font-size: 12.5px !important;
+    padding: 6px 2px !important;
+    letter-spacing: 0.1px !important;
+  }
+  .vl-hero-btn {
+    padding-left: 12px !important;
+  }
+  .vl-hero-btn .vl-btn1 {
+    font-size: 11.5px !important;
+    padding: 8px 14px !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .vl-main-menu nav.vl-mobile-menu-active {
+    margin-left: 18px !important;
+  }
+  .vl-main-menu nav.vl-mobile-menu-active > ul {
+    gap: 14px !important;
+  }
+  .vl-main-menu nav.vl-mobile-menu-active > ul > li > a {
+    font-size: 13.5px !important;
+    padding: 8px 3px !important;
+  }
+  .vl-hero-btn {
+    padding-left: 20px !important;
+  }
+}
+
+/* 10. Mobile Header Toggle */
+.vl-offcanvas-toggle {
+  background: transparent !important;
+  border: none !important;
+  font-size: 24px !important;
+  line-height: 1 !important;
+  padding: 4px 8px !important;
+  cursor: pointer !important;
+  color: #ffffff;
+  transition: color 0.25s ease, transform 0.2s ease !important;
+}
+
+body:not(.is-homepage) .vl-offcanvas-toggle,
+.vl-inner-solid-header .vl-offcanvas-toggle {
+  color: #1A1815 !important;
+}
+
+.vl-offcanvas-toggle:hover {
+  color: #C9A84C !important;
+  transform: scale(1.05);
+}
