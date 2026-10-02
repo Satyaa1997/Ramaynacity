@@ -97,6 +97,69 @@
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
+  
+  <style>
+    /* ===== FIXED & CLEAN FLOATING BUTTONS STYLING ===== */
+    .btn-floating {
+      position: fixed !important;
+      left: 20px !important;
+      z-index: 99999 !important;
+      display: flex !important;
+      align-items: center !important;
+      background-color: #ffffff !important;
+      border: none !important;
+      padding: 10px 14px !important;
+      border-radius: 50px !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
+      transition: all 0.3s ease !important;
+      cursor: pointer !important;
+      overflow: hidden !important;
+      height: 50px !important;
+      width: 50px !important;
+    }
+
+    .btn-floating.phone {
+      bottom: 85px !important;
+      background: linear-gradient(135deg, #C9A84C 0%, #E8D08A 50%, #C9A84C 100%) !important;
+    }
+
+    .btn-floating.whatsapp {
+      bottom: 20px !important;
+      background-color: #34af23 !important;
+    }
+
+    .btn-floating img {
+      width: 24px !important;
+      height: 24px !important;
+      min-width: 24px !important;
+      object-fit: contain !important;
+      margin-right: 0px;
+      transition: 0.3s ease;
+    }
+
+    .btn-floating span {
+      font-size: 14px !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      white-space: nowrap !important;
+      margin-left: 10px !important;
+      display: none !important;
+    }
+
+    .btn-floating:hover {
+      width: 195px !important;
+      padding: 10px 20px !important;
+    }
+
+    .btn-floating:hover span {
+      display: inline-block !important;
+    }
+
+    .btn-floating.whatsapp:hover {
+      background-color: #1f7a12 !important;
+    }
+  </style>
+
   <style>
     #preev-btn:hover {
       color: var(--bs-btn-hover-color);
@@ -184,7 +247,6 @@
 
     .section-bg {
       background-image: url('./assets/img/all-images/banner-img.jpg');
-      /* Replace with your actual image path */
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
@@ -193,7 +255,6 @@
       z-index: 1;
       padding: 100px 0;
       color: white;
-      /* Optional: makes text visible over background */
     }
 
     .section-bg::before {
@@ -204,7 +265,6 @@
       width: 100%;
       height: 100%;
       background-color: rgb(0 0 0 / 69%);
-      /* Optional overlay */
       z-index: -1;
     }
 
@@ -265,17 +325,12 @@
 
     .property-listing-boxarea {
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      /* subtle, clean shadow */
       border-radius: 10px;
-      /* optional: adds rounded corners */
       overflow: hidden;
-      /* optional: hides any overflow from children */
       background-color: #fff;
-      /* recommended for better shadow contrast */
       margin-bottom: 20px;
     }
 
-    /* Default: transparent header, white nav text */
     .vl-header-area {
       background: transparent !important;
       box-shadow: none !important;
@@ -284,10 +339,8 @@
 
     .vl-header-area .vl-main-menu ul li a {
       color: #ffffff !important;
-
     }
 
-    /* Sticky: white bg, dark nav text */
     .vl-header-area.is-sticky {
       background: #ffffff !important;
       box-shadow: 0 2px 16px rgba(0, 0, 0, 0.10) !important;
@@ -299,7 +352,6 @@
       text-shadow: none !important;
     }
 
-    /* Show default logo, hide sticky one */
     .default-logo {
       display: inline-block;
     }
@@ -308,7 +360,6 @@
       display: none;
     }
 
-    /* When sticky class is added */
     .vl-header-area.is-sticky .default-logo {
       display: none !important;
     }
@@ -332,13 +383,11 @@
       font-weight: 500;
       background: #1a1a1a;
       border: 1px solid #1a1a1a;
-      /* font-size: 20px !important; */
       line-height: 30px;
     }
 
     .btn-close-white {
       filter: invert(1);
-      /* makes it white */
     }
 
     .modal-header {
@@ -351,7 +400,6 @@
       padding-bottom: 0.5rem;
       padding-left: 1rem;
       font-size: 1rem;
-
     }
 
     .form-control-lg {
@@ -363,19 +411,6 @@
 
     label.form-label {
       font-weight: 500;
-    }
-
-    .floating-buttons {
-      position: fixed;
-      top: 40%;
-      right: 22px;
-      /* Push outside a bit, adjust if needed */
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      z-index: 1050;
-      transform: translateY(-50%);
-      transition: right 0.3s ease;
     }
 
     .custom-btn {
@@ -448,11 +483,8 @@
       width: 100%;
       height: 100vh;
       background-color: rgb(0 0 0 / 59%);
-      /* Adjust opacity here */
       z-index: 0;
-      /* Keep behind the content */
     }
-
 
     .content-area {
       background: #ffffff;
@@ -489,103 +521,6 @@
       transform: translateY(-50%) !important;
     }
 
-    /* Base */
-    .btn-floating:hover img {
-      margin-bottom: -3px
-    }
-
-    .btn-floating {
-      position: fixed;
-      right: 25px;
-      overflow: hidden;
-      width: 50px;
-      height: 50px;
-      border-radius: 100px;
-      border: 0;
-      z-index: 9999;
-      color: white;
-      transition: .2s;
-    }
-
-    .btn-floating:hover {
-      width: 200px;
-      padding: 0 20px;
-      cursor: pointer;
-    }
-
-    .btn-floating span {
-      font-size: 16px;
-      margin-left: 5px;
-      transition: .2s;
-      line-height: 0px;
-      display: none;
-    }
-
-    .btn-floating:hover span {
-      display: inline-block;
-    }
-
-    /* Phone */
-    .btn-floating.phone {
-      bottom: 85px;
-      background: linear-gradient(135deg, #C9A84C 0%, #E8D08A 50%, #C9A84C 100%);
-    }
-
-    .btn-floating.phone:hover {
-      background: linear-gradient(135deg, #C9A84C 0%, #E8D08A 50%, #C9A84C 100%);
-    }
-
-    /* WhatsApp */
-    .btn-floating.whatsapp {
-      background-color: #34af23;
-      bottom: 25px;
-    }
-
-    .btn-floating.whatsapp:hover {
-      background-color: #1f7a12
-    }
-
-    .btn-floating {
-      position: fixed;
-      left: 20px;
-      /* left side */
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      background-color: #fff;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 50px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-      cursor: pointer;
-      margin-bottom: 10px;
-    }
-
-    .btn-floating img {
-      width: 24px;
-      height: 24px;
-      margin-right: 10px;
-    }
-
-    .btn-floating span {
-      font-size: 14px;
-      color: #fff;
-    }
-
-    .btn-floating.phone {
-      bottom: 80px;
-      /* distance from bottom */
-    }
-
-    .btn-floating.whatsapp {
-      bottom: 20px;
-      /* below phone button */
-    }
-
-    /* ==========================================
-       AMENITIES REDESIGN (Swiper Slider)
-       ========================================== */
     .amenities-slider-section {
       background-color: #FAF8F5 !important;
       padding: 100px 0 80px 0 !important;
@@ -600,7 +535,6 @@
 
     .amenities-heading .amenities-tag {
       font-family: 'Cinzel', 'Plus Jakarta Sans', sans-serif !important;
-
       color: #C8A22C;
       font-size: 14px;
       font-weight: 600;
@@ -719,7 +653,6 @@
       font-size: 20px;
     }
 
-    /* Slider Navigation */
     .amenity-prev,
     .amenity-next {
       color: #1a1a1a !important;
@@ -752,14 +685,12 @@
     }
 
     @media (max-width: 767px) {
-
       .amenity-prev,
       .amenity-next {
         display: none !important;
       }
     }
 
-    /* Slider Pagination Bullets as Horizontal Lines */
     .amenity-pagination {
       bottom: 15px !important;
       display: flex !important;
@@ -782,7 +713,6 @@
       width: 60px !important;
     }
 
-    /* ===== MASTER PLAN SECTION ===== */
     .masterplan-section {
       background: #0f0c08;
       padding: 90px 0;
@@ -790,7 +720,6 @@
 
     .masterplan-section .section-label {
       font-family: 'Cinzel', 'Plus Jakarta Sans', sans-serif !important;
-
       color: #C8A22C;
       font-size: 13px;
       font-weight: 700;
@@ -802,7 +731,6 @@
 
     .masterplan-section h2 {
       font-family: 'Playfair Display', 'Cinzel', Georgia, serif !important;
-
       color: #fff;
       font-size: 42px;
       font-weight: 700;
@@ -877,7 +805,6 @@
       letter-spacing: 0.5px;
     }
 
-    /* ===== LOCATION SWIPER ===== */
     .location-swiper-section {
       padding: 90px 0;
       background: #faf8f4;
@@ -926,7 +853,6 @@
       background: linear-gradient(to top, rgba(10, 8, 5, 0.85) 0%, rgba(10, 8, 5, 0.1) 60%);
     }
 
-
     .loc-slide-content {
       position: absolute;
       bottom: 0;
@@ -963,7 +889,6 @@
       text-transform: uppercase;
     }
 
-
     .contact-form-btn:hover {
       background: linear-gradient(135deg, #A07828 0%, #C9A84C 100%) !important;
       transform: translateY(-2px) !important;
@@ -994,7 +919,6 @@
   </style>
 
   <style>
-    /* ===== WHY CHOOSE PREMIUM SECTION (Luxury Light Grey Theme) ===== */
     .why-choose-premium {
       background: #F4F2EC !important;
       padding: 95px 0 !important;
@@ -1016,7 +940,6 @@
 
     .wcp-tag {
       font-family: 'Cinzel', 'Plus Jakarta Sans', sans-serif !important;
-
       color: #A07828 !important;
       font-size: 13px !important;
       font-weight: 700 !important;
@@ -1028,7 +951,6 @@
 
     .wcp-heading-inner h2 {
       font-family: 'Playfair Display', 'Cinzel', Georgia, serif !important;
-
       color: #1A1815 !important;
       font-size: 44px !important;
       font-weight: 700 !important;
@@ -1168,7 +1090,6 @@
       transform: translateX(5px);
     }
 
-    /* Stats Bar inside section */
     .wcp-stats-bar {
       display: flex;
       justify-content: center;
@@ -1231,8 +1152,6 @@
       }
 
       .wcp-heading-inner h2 {
-        font-family: 'Playfair Display', 'Cinzel', Georgia, serif !important;
-
         font-size: 32px !important;
       }
 
@@ -1251,24 +1170,14 @@
       }
     }
   </style>
-  <style>
-    /* ===== ALTERNATING SECTION BACKGROUND SCHEME =====
-       Section 1 (About): WHITE (#ffffff)
-       Section 2 (Why Choose): LIGHT GREY (#F4F2EC)
-       Section 3 (Amenities): WHITE (#ffffff)
-       Section 4 (Master Plan): LIGHT GREY (#F4F2EC)
-       Section 5 (Location): WHITE (#ffffff)
-       Section 6 (Book Site Visit / Form): LIGHT GREY (#F4F2EC)
-       ==================================================== */
 
-    /* Section 1: About Area */
+  <style>
     .heading1,
     .about-section,
     .vl-about-area {
       background-color: transparent;
     }
 
-    /* Section 2: Why Choose Premium */
     .why-choose-premium {
       background: #F4F2EC !important;
       padding: 95px 0 !important;
@@ -1277,14 +1186,12 @@
       border-bottom: 1px solid #E5E0D5;
     }
 
-    /* Section 3: Amenities Slider */
     .amenities-slider-section {
       background-color: #FFFFFF !important;
       padding: 100px 0 80px 0 !important;
       border-top: 4px solid #C8A22C;
     }
 
-    /* Section 4: Master Plan Section (Converted from Dark to Light Grey) */
     .masterplan-section {
       background: #F4F2EC !important;
       padding: 95px 0 !important;
@@ -1295,7 +1202,6 @@
 
     .masterplan-section .section-label {
       font-family: 'Cinzel', 'Plus Jakarta Sans', sans-serif !important;
-
       color: #A07828 !important;
       font-size: 13px !important;
       font-weight: 700 !important;
@@ -1307,7 +1213,6 @@
 
     .masterplan-section h2 {
       font-family: 'Playfair Display', 'Cinzel', Georgia, serif !important;
-
       color: #1A1815 !important;
       font-size: 44px !important;
       font-weight: 700 !important;
@@ -1347,7 +1252,6 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
 
-    /* Section 5: Location Section */
     .location-swiper-section {
       background-color: #FFFFFF !important;
       padding: 95px 0 !important;
@@ -1361,7 +1265,6 @@
       color: #4A453E !important;
     }
 
-    /* Section 6: Site Visit / Booking Area */
     .testi2.sp1 {
       background: #F4F2EC !important;
       padding-top: 90px !important;
@@ -1390,42 +1293,16 @@
       font-weight: 600 !important;
     }
 
-
-    /* Global Typography — Royal Luxury & Heritage */
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    .heading1 h1,
-    .heading2 h1,
-    .heading1 h2,
-    .heading2 h2,
-    .heading3 h2,
-    .heading4 h2 {
+    h1, h2, h3, h4, h5, h6,
+    .heading1 h1, .heading2 h1, .heading1 h2, .heading2 h2, .heading3 h2, .heading4 h2 {
       font-family: 'Playfair Display', 'Cinzel', Georgia, serif !important;
     }
 
-    body,
-    p,
-    li,
-    label,
-    input,
-    textarea,
-    select,
-    button,
-    .btn {
+    body, p, li, label, input, textarea, select, button, .btn {
       font-family: 'Plus Jakarta Sans', sans-serif !important;
     }
 
-    /* Headings span font-size inheritance */
-    h1 span,
-    h2 span,
-    h3 span,
-    h4 span,
-    h5 span,
-    h6 span {
+    h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
       font-family: inherit !important;
       font-size: inherit !important;
       font-weight: inherit !important;
@@ -1434,7 +1311,6 @@
   </style>
 
   <style>
-    /* ===== LOCATION ADVANTAGES SWIPER ARROWS & CENTERED UNDERLINE ===== */
     .text-center .heading1 h2::after,
     .text-center .heading2 h2::after,
     .text-center.heading1 h2::after,
@@ -1494,13 +1370,12 @@
       color: #0D0D0D !important;
     }
   </style>
+
   <style>
-    /* ===== CLEAN ORIGINAL LOGO (NO FILTERS, SAME EVERYWHERE) ===== */
     .vl-logo img,
     .vl-offcanvas-logo img,
     .footer-time-area img,
     #vl-header-sticky.is-sticky .vl-logo img {
-
       object-fit: contain !important;
       filter: none !important;
       transform: none !important;
@@ -1514,17 +1389,8 @@
       transform: none !important;
     }
   </style>
-  <style>
-    /* ===== STRICT ALTERNATING SECTION BACKGROUND SCHEME =====
-       Section 1: WHITE (#ffffff)
-       Section 2: LIGHT GREY (#F4F2EC)
-       Section 3: WHITE (#ffffff)
-       Section 4: LIGHT GREY (#F4F2EC)
-       Section 5: WHITE (#ffffff)
-       Section 6: LIGHT GREY (#F4F2EC)
-       ========================================================= */
 
-    /* Vision Section (Section 3 on About Page): WHITE */
+  <style>
     .vision-section {
       background: #FFFFFF !important;
       padding: 90px 0 !important;
@@ -1570,7 +1436,6 @@
       margin: 0 !important;
     }
 
-    /* Investment Section (Section 4 on About Page): LIGHT GREY */
     .invest-section {
       background: #F4F2EC !important;
       padding: 90px 0 !important;
@@ -1608,7 +1473,6 @@
       margin: 0 !important;
     }
 
-    /* CTA Section (Section 5 on About Page): WHITE */
     .cta-section {
       background: #FFFFFF !important;
       padding: 85px 0 !important;
@@ -1640,7 +1504,6 @@
   </style>
 
   <style>
-    /* ===== SINGLE CLEAN GOLD BORDER FOOTER SCHEME ===== */
     .footer-cta2-bg-area {
       background: #F4F2EC !important;
       border-top: 3px solid #C8A22C !important;
@@ -1704,9 +1567,6 @@
       display: inline-block !important;
       padding-bottom: 8px !important;
       margin-bottom: 22px !important;
-      border-top: none !important;
-      border-left: none !important;
-      border-right: none !important;
     }
 
     .footer-widget-area h3::after {
@@ -1724,8 +1584,6 @@
       padding: 0 !important;
       list-style: none !important;
     }
-
-
 
     .footer-widget-area ul li a {
       color: #3D3831 !important;
@@ -1834,8 +1692,8 @@
       margin-left: 10px !important;
     }
   </style>
+
   <style>
-    /* ===== UNIQUE ULTRA LUXURY ENQUIRY MODAL STYLING ===== */
     #enquiryModal .modal-content {
       border-radius: 22px !important;
       border: 2px solid #C8A22C !important;
@@ -2003,155 +1861,8 @@
       font-weight: 500 !important;
     }
   </style>
+
   <style>
-    /* ===== SOLID NORMAL HEADER FOR ALL INNER PAGES (NOT OVERLAP IMAGE) ===== */
-    .vl-inner-solid-header {
-      position: relative !important;
-      background: #1A1815 !important;
-      border-bottom: 2px solid #C8A22C !important;
-      padding: 12px 0 !important;
-      z-index: 100 !important;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
-    }
-
-    .vl-inner-solid-header.is-sticky {
-      position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
-      width: 100% !important;
-      animation: fadeInDown 0.4s ease !important;
-      background: #1A1815 !important;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35) !important;
-    }
-
-    .vl-inner-solid-header .vl-main-menu ul li a {
-      color: #ffffff !important;
-      font-weight: 600 !important;
-      font-size: 15px !important;
-    }
-
-    .vl-inner-solid-header .vl-main-menu ul li a:hover {
-      color: #C9A84C !important;
-    }
-
-    .vl-inner-solid-header .vl-main-menu ul li:not(:last-child) a::after {
-      color: rgba(200, 162, 44, 0.6) !important;
-    }
-  </style>
-  <style>
-    /* ===== DEFINITIVE HEADER OVERLAP FIX FOR ALL INNER PAGES ===== */
-    body:not(.is-homepage) header,
-    body:not(.is-homepage) header.homepage2-body,
-    body:not(.is-homepage) .vl-header-area,
-    .vl-inner-solid-header {
-      position: relative !important;
-      top: auto !important;
-      left: auto !important;
-      right: auto !important;
-      width: 100% !important;
-      background: #1A1815 !important;
-      border-bottom: 2px solid #C8A22C !important;
-      z-index: 100 !important;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
-    }
-
-    body:not(.is-homepage) .vl-inner-solid-header.is-sticky,
-    body:not(.is-homepage) .vl-header-area.is-sticky {
-      position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
-      width: 100% !important;
-      background: #1A1815 !important;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4) !important;
-      animation: fadeInDown 0.4s ease !important;
-    }
-
-
-    .vl-inner-solid-header .vl-main-menu ul li a {
-      color: #ffffff !important;
-      font-weight: 600 !important;
-      font-size: 15px !important;
-    }
-
-    .vl-inner-solid-header .vl-main-menu ul li a:hover {
-      color: #C9A84C !important;
-    }
-
-    .vl-inner-solid-header .vl-main-menu ul li:not(:last-child) a::after {
-      color: rgba(200, 162, 44, 0.6) !important;
-    }
-  </style>
-  <style>
-    /* ===== SEPARATE SOLID WHITE HEADER FOR ALL INNER PAGES (NO OVERLAP ON BANNER IMAGE) ===== */
-    body:not(.is-homepage) header,
-    body:not(.is-homepage) header.homepage2-body,
-    body:not(.is-homepage) .vl-header-area,
-    .vl-inner-solid-header {
-      position: relative !important;
-      top: auto !important;
-      left: auto !important;
-      right: auto !important;
-      width: 100% !important;
-      background: #ffffff !important;
-      border-bottom: 3px solid #C8A22C !important;
-      z-index: 100 !important;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
-      padding: 8px 0 !important;
-    }
-
-    body:not(.is-homepage) .vl-inner-solid-header.is-sticky,
-    body:not(.is-homepage) .vl-header-area.is-sticky {
-      position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
-      width: 100% !important;
-      background: #ffffff !important;
-      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12) !important;
-      animation: fadeInDown 0.4s ease !important;
-    }
-
-    body:not(.is-homepage) .vl-main-menu ul li a,
-    .vl-inner-solid-header .vl-main-menu ul li a {
-      color: #1A1815 !important;
-      font-weight: 700 !important;
-      font-size: 15px !important;
-    }
-
-    body:not(.is-homepage) .vl-main-menu ul li a:hover,
-    .vl-inner-solid-header .vl-main-menu ul li a:hover {
-      color: #B8860B !important;
-    }
-
-    body:not(.is-homepage) .vl-main-menu ul li:not(:last-child) a::after,
-    .vl-inner-solid-header .vl-main-menu ul li:not(:last-child) a::after {
-      color: #C8A22C !important;
-    }
-
-    .vl-inner-solid-header .sub-menu {
-      background: #ffffff !important;
-      border-top: 3px solid #C8A22C !important;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
-    }
-
-    .vl-inner-solid-header .sub-menu li a {
-      color: #1A1815 !important;
-    }
-
-    .vl-inner-solid-header .sub-menu li a:hover {
-      color: #B8860B !important;
-    }
-
-    /* ===== HIDE ALL STRAY DECORATIVE LINES ===== */
-    .hero-deco-line,
-    .hero-deco-line-1,
-    .hero-deco-line-2,
-    .hero-tagline-line {
-      display: none !important;
-      visibility: hidden !important;
-      opacity: 0 !important;
-    }
-
-    /* ===== HERO LUXURY FEATURE BAR & FLOATING STATS CARD ===== */
     .hero-feature-bar {
       display: flex;
       align-items: center;
@@ -2285,7 +1996,6 @@
       background: linear-gradient(90deg, rgba(200, 162, 44, 0.4), transparent);
     }
 
-    /* ===== HERO SECTION MOBILE RESPONSIVENESS ===== */
     @media (max-width: 991px) {
       .hero-luxury .container {
         height: auto !important;
@@ -2388,6 +2098,7 @@
 </head>
 
 <body class="is-homepage">
+  <!--===== FIXED FLOATING BUTTONS START =====-->
   <a href="tel:+918882125125">
     <button class="btn-floating phone">
       <img src="https://i.imgur.com/FZuns9L.png" alt="Phone">
@@ -2401,9 +2112,8 @@
       <span>+91-8882125125</span>
     </button>
   </a>
+  <!--===== FIXED FLOATING BUTTONS END =====-->
 
-
-  <!--===== PROGRESS ENDS=======-->
   <!--=====HEADER START=======-->
   <header class="homepage2-body">
     <div id="vl-header-sticky" class="vl-header-area vl-transparent-header">
@@ -2460,6 +2170,7 @@
     </div>
   </header>
   <!--=====HEADER END =======-->
+
   <!--===== MOBILE OFFCANVAS =======-->
   <div class="homepage2-body">
     <div class="vl-offcanvas">
@@ -2514,26 +2225,21 @@
       <div class="row h-100 align-items-center">
         <div class="col-lg-8 col-xl-7">
           <div class="hero-content-luxury">
-
-            <!-- Top label -->
             <div class="hero-label">
               <span class="hero-label-dot"></span>
               <span class="hero-label-text">Premium Residential Township &middot; Lucknow</span>
               <span class="hero-label-dot"></span>
             </div>
 
-            <!-- Main Heading -->
             <h1 class="hero-title-luxury">
               <span class="hero-welcome-sub">Welcome to</span>
               <span class="hero-title-golden">Ramayana City</span>
             </h1>
 
-            <!-- Tagline -->
             <div class="hero-tagline-wrap">
               <p class="hero-tagline">Where Spiritual Legacy Meets Modern Living</p>
             </div>
 
-            <!-- CTA Buttons -->
             <div class="hero-cta-wrap">
               <a href="contact.html" class="hero-btn-primary">
                 <span>Book Site Visit</span>
@@ -2544,16 +2250,11 @@
                 <span>Explore Township</span>
               </a>
             </div>
-
           </div>
         </div>
-
-        
-
       </div>
     </div>
 
-    <!-- Scroll indicator -->
     <div class="hero-scroll-indicator">
       <div class="hero-scroll-mouse">
         <div class="hero-scroll-wheel"></div>
@@ -2565,20 +2266,19 @@
 
 
   <!--===== ABOUT AREA STARTS =======-->
-  <div class="about2 sp1 py-5" style="background: #ffffff;">
+  <div class="about2 sp1 py-5" style="background: #ffffff;" id="about">
     <div class="container">
       <div class="row align-items-stretch g-4 g-lg-5">
         <div class="col-lg-5 d-flex">
           <div class="about-img-showcase"
             style="width: 100%; border-radius: 18px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.12); border: 2px solid #C8A22C; min-height: 520px; display: flex;">
-            <img src="assets/img/all-images/about_ramayana_city.png" alt="Ramayana City Township"
+            <img src="assets/img/all-images/image_553ff82f.jpg.jpeg" alt="Ramayana City Township"
               style="width: 100%; height: 100%; object-fit: cover; display: block;">
           </div>
         </div>
 
         <div class="col-lg-7 d-flex flex-column justify-content-center">
           <div class="heading1 ps-lg-3">
-
             <span
               style="color:#C8A22C; font-weight:700; letter-spacing:3px; text-transform:uppercase; font-size:13px; display:block; margin-bottom:10px;">About
               the Project</span>
@@ -2587,15 +2287,13 @@
               Modern Living Rooted in Timeless Spiritual Values
             </h2>
 
-            <p data-aos="fade-left" data-aos-duration="1000"
-              style="color:#3D3831; font-size:15.5px; line-height:1.8; margin-bottom:16px;">
+            <p style="color:#3D3831; font-size:15.5px; line-height:1.8; margin-bottom:16px;">
               Welcome to <strong>Ramayana City</strong>—a premier gated township designed for modern living rooted in
               timeless spiritual values. Located on NH56B in Khatola Village, Sarojini Nagar, Lucknow, Ramayana City
               offers the perfect harmony between modern urban connectivity and peaceful residential living.
             </p>
 
-            <p data-aos="fade-left" data-aos-duration="1000"
-              style="color:#3D3831; font-size:15.5px; line-height:1.8; margin-bottom:20px;">
+            <p style="color:#3D3831; font-size:15.5px; line-height:1.8; margin-bottom:20px;">
               At the heart of our community stands a serene <strong>Ram Temple</strong> and a magnificent <strong>statue
                 of Lord Rama</strong>, creating a tranquil haven away from the city's hustle.
             </p>
@@ -2605,9 +2303,7 @@
               <h4 style="color:#1A1815; font-size:18px; font-weight:700; margin-bottom:8px;">
                 Our Vision
               </h4>
-
-              <p data-aos="fade-left" data-aos-duration="1000"
-                style="color:#3D3831; font-size:14.5px; line-height:1.7; margin:0;">
+              <p style="color:#3D3831; font-size:14.5px; line-height:1.7; margin:0;">
                 To create a landmark township where spiritual values, sustainable
                 development, and modern urban living come together, offering an
                 exceptional lifestyle and a valuable investment opportunity for
@@ -2615,31 +2311,24 @@
               </p>
             </div>
 
-            <div class="btn-area1" data-aos="fade-left" data-aos-duration="1200">
-
+            <div class="btn-area1">
               <a href="about-us.html" class="vl-btn1">
                 Explore More
-                <span class="arrow1">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </span>
-                <span class="arrow2">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </span>
+                <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span>
+                <span class="arrow2"><i class="fa-solid fa-arrow-right"></i></span>
               </a>
-
             </div>
-
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!--===== ABOUT AREA ENDS =======-->
 
 
+  <!--===== WHY CHOOSE PREMIUM SECTION STARTS =======-->
   <div class="why-choose-premium">
     <div class="container">
-
-      <!-- Top Heading -->
       <div class="wcp-heading-wrap">
         <div class="wcp-heading-inner">
           <span class="wcp-tag">Township Highlights</span>
@@ -2650,16 +2339,13 @@
         </div>
       </div>
 
-      <!-- Full Width 4-Panel Feature Grid -->
       <div class="wcp-panels">
-
-        <!-- Panel 1: Grand Entrance -->
-        <div class="wcp-panel" data-aos="fade-up" data-aos-duration="800">
-          <div class="wcp-panel-img" style="background-image: url('assets/img/all-images/entrance-gate.jpg');"></div>
+        <div class="wcp-panel">
+          <div class="wcp-panel-img" style="background-image: url('assets/img/all-images/Grand\ Entrence.jpeg');"></div>
           <div class="wcp-panel-overlay"></div>
           <div class="wcp-panel-content">
             <div class="wcp-panel-num">01</div>
-            <div class="wcp-panel-tag">🏛️ Grand Gateway</div>
+            <div class="wcp-panel-tag"> Grand Gateway</div>
             <h3>Grand Entrance</h3>
             <p>A 35-meter-wide grand boulevard with dual 9-meter roads and a lush 17-meter central green belt.</p>
             <a href="about-us.html" class="wcp-btn">
@@ -2668,13 +2354,12 @@
           </div>
         </div>
 
-        <!-- Panel 2: Bespoke Residential Plots -->
-        <div class="wcp-panel wcp-panel--center" data-aos="fade-up" data-aos-duration="1000">
+        <div class="wcp-panel wcp-panel--center">
           <div class="wcp-panel-img" style="background-image: url('assets/img/all-images/green-township.jpg');"></div>
           <div class="wcp-panel-overlay"></div>
           <div class="wcp-panel-content">
             <div class="wcp-panel-num">02</div>
-            <div class="wcp-panel-tag">🏡 Premium Living</div>
+            <div class="wcp-panel-tag"> Premium Living</div>
             <h3>Bespoke Residential Plots</h3>
             <p>Flexible plot sizes designed to help you build a lasting family legacy.</p>
             <a href="index.html#amenities" class="wcp-btn">
@@ -2683,25 +2368,21 @@
           </div>
         </div>
 
-        <!-- Panel 3: Strategic Location & Investment -->
-        <div class="wcp-panel" data-aos="fade-up" data-aos-duration="1200">
-          <div class="wcp-panel-img" style="background-image: url('assets/img/all-images/highway.jpg');"></div>
+        <div class="wcp-panel">
+          <div class="wcp-panel-img" style="background-image: url('assets/img/all-images/Loc&Invest.png');"></div>
           <div class="wcp-panel-overlay"></div>
           <div class="wcp-panel-content">
             <div class="wcp-panel-num">03</div>
-            <div class="wcp-panel-tag">🛣️ Strategic &amp; High-Value</div>
+            <div class="wcp-panel-tag"> Strategic &amp; High-Value</div>
             <h3>Strategic Location &amp; High-Value Investment</h3>
-            <p>Direct access to NH56B with upcoming arterial links connecting seamlessly to Agra &amp; Purvanchal
-              Expressways — an ideal blend of high-growth potential and secure living.</p>
+            <p>Prime location with excellent connectivity to major roads. A promising opportunity with strong growth prospects and long-term value appreciation.</p>
             <a href="index.html#location" class="wcp-btn">
               View Location <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
         </div>
-
       </div>
 
-      <!-- Bottom Stats Bar -->
       <div class="wcp-stats-bar">
         <div class="wcp-stat">
           <span class="wcp-stat-num">35m</span>
@@ -2723,7 +2404,6 @@
           <span class="wcp-stat-label">Prime Location</span>
         </div>
       </div>
-
     </div>
   </div>
   <!--===== WHY CHOOSE PREMIUM SECTION ENDS =======-->
@@ -2731,101 +2411,61 @@
 
   <!--===== AMENITIES SLIDER STARTS =======-->
   <div id="amenities" class="amenities-slider-section">
-
-    <!-- Section Heading -->
     <div class="amenities-heading text-center">
       <span class="amenities-tag">Premium Amenities</span>
       <h2>Amenities at <span>Ramayana City</span></h2>
     </div>
 
-    <!-- Full Width Swiper Slider -->
     <div class="swiper amenitiesSwiper">
       <div class="swiper-wrapper">
-
-        <!-- Slide 1 -->
         <div class="swiper-slide amenity-slide">
-          <img src="assets/img/all-images/ram-temple.jpg" alt="Ram Temple">
-          <div class="amenity-label">
-            <i class="fa-solid fa-gopuram"></i> Ram Temple
-          </div>
+          <img src="assets/img/all-images/Mandir.jpeg" alt="Ram Temple">
+          <div class="amenity-label"><i class="fa-solid fa-gopuram"></i> Ram Temple</div>
         </div>
 
-        <!-- Slide 2 -->
         <div class="swiper-slide amenity-slide">
           <img src="assets/img/all-images/lord-rama.jpg" alt="Lord Rama Statue">
-          <div class="amenity-label">
-            <i class="fa-solid fa-star"></i> Lord Rama Statue
-          </div>
+          <div class="amenity-label"><i class="fa-solid fa-star"></i> Lord Rama Statue</div>
         </div>
 
-        <!-- Slide 3 -->
         <div class="swiper-slide amenity-slide">
           <img src="assets/img/all-images/green-belt.jpg" alt="17 Meter Green Belt">
-          <div class="amenity-label">
-            <i class="fa-solid fa-leaf"></i> 17 Meter Green Belt
-          </div>
+          <div class="amenity-label"><i class="fa-solid fa-leaf"></i> 17 Meter Green Belt</div>
         </div>
 
-        <!-- Slide 4 -->
-        <div class="swiper-slide amenity-slide">
-          <img src="assets/img/all-images/wide-road.jpg" alt="35 Meter Wide Roads">
-          <div class="amenity-label">
-            <i class="fa-solid fa-road"></i> 35 Meter Wide Roads
-          </div>
-        </div>
-
-        <!-- Slide 5 -->
         <div class="swiper-slide amenity-slide">
           <img src="assets/img/all-images/security.jpg" alt="Gated Community">
-          <div class="amenity-label">
-            <i class="fa-solid fa-shield-halved"></i> Gated Community & Security
-          </div>
+          <div class="amenity-label"><i class="fa-solid fa-shield-halved"></i> Gated Community & Security</div>
         </div>
 
-        <!-- Slide 6 -->
         <div class="swiper-slide amenity-slide">
           <img src="assets/img/all-images/park.jpg" alt="Landscaped Parks">
-          <div class="amenity-label">
-            <i class="fa-solid fa-tree"></i> Landscaped Parks
-          </div>
+          <div class="amenity-label"><i class="fa-solid fa-tree"></i> Landscaped Parks</div>
         </div>
 
-        <!-- Slide 7 -->
         <div class="swiper-slide amenity-slide">
-          <img src="assets/img/all-images/connectivity.jpg" alt="Prime Connectivity">
-          <div class="amenity-label">
-            <i class="fa-solid fa-location-dot"></i> Prime NH-56B Connectivity
-          </div>
+          <img src="assets/img/all-images/AgraExpressway.jpg" alt="Prime Connectivity">
+          <div class="amenity-label"><i class="fa-solid fa-location-dot"></i> Prime NH-56B Connectivity</div>
         </div>
 
-        <!-- Slide 8 -->
         <div class="swiper-slide amenity-slide">
-          <img src="assets/img/all-images/entrance-gate.jpg" alt="Grand Entrance Gate">
-          <div class="amenity-label">
-            <i class="fa-solid fa-archway"></i> Grand Entrance Gate
-          </div>
+          <img src="assets/img/all-images/Grand Entrence.jpeg" alt="Grand Entrance Gate">
+          <div class="amenity-label"><i class="fa-solid fa-archway"></i> Grand Entrance Gate</div>
         </div>
-
       </div>
 
-      <!-- Navigation Arrows -->
       <div class="swiper-button-prev amenity-prev"></div>
       <div class="swiper-button-next amenity-next"></div>
-
-      <!-- Pagination Bullets -->
       <div class="swiper-pagination amenity-pagination"></div>
     </div>
-
   </div>
   <!--===== AMENITIES SLIDER ENDS =======-->
-  <!--===== REDUNDANT COUNTER SECTION REMOVED =====-->
+
 
   <!--===== MASTER PLAN & PDF LAYOUT SECTION STARTS =======-->
   <div class="masterplan-section" id="masterplan">
     <div class="container">
-
-      <!-- Section Header -->
-      <div class="text-center mb-5" data-aos="fade-up">
+      <div class="text-center mb-5">
         <span class="section-label">Official Project Layout</span>
         <h2 style="font-size:40px; font-weight:700; color:#1A1815; margin-top:8px;">
           Master Plan &amp; <span style="color:#B8860B;">Layout PDF</span>
@@ -2841,19 +2481,16 @@
         </div>
       </div>
 
-      <!-- Live Interactive PDF Viewer Embed -->
-      <div class="row" data-aos="fade-up" data-aos-duration="1000">
+      <div class="row">
         <div class="col-lg-12">
           <div class="pdf-viewer-card p-3 rounded-4"
             style="background:#ffffff; border:2px solid #C8A22C; box-shadow:0 20px 40px rgba(0,0,0,0.08);">
-
-            <!-- Toolbar bar above PDF -->
+            
             <div class="d-flex justify-content-between align-items-center flex-wrap p-3 mb-3 rounded-3"
               style="background:#F4F2EC; border:1px solid #E5E0D5;">
               <div class="d-flex align-items-center gap-2 mb-2 mb-sm-0">
                 <i class="fa-solid fa-file-pdf text-danger fs-4"></i>
-                <strong style="color:#1A1815; font-size:16px;">Ramayana City Official Layout &amp; Master Plan
-                  (PDF)</strong>
+                <strong style="color:#1A1815; font-size:16px;">Ramayana City Official Layout &amp; Master Plan (PDF)</strong>
               </div>
               <div class="d-flex gap-2 flex-wrap">
                 <a href="assets/img/all-images/R-city.pdf" target="_blank"
@@ -2869,13 +2506,10 @@
               </div>
             </div>
 
-            <!-- PDF iFrame / Object embed -->
             <div class="pdf-embed-wrapper"
               style="position:relative; width:100%; height:650px; border-radius:12px; overflow:hidden; background:#f8f9fa;">
-              <object data="assets/img/all-images/R-city.pdf#toolbar=1" type="application/pdf" width="100%"
-                height="100%">
-                <iframe src="assets/img/all-images/R-city.pdf#toolbar=1" width="100%" height="100%"
-                  style="border:none;">
+              <object data="assets/img/all-images/R-city.pdf#toolbar=1" type="application/pdf" width="100%" height="100%">
+                <iframe src="assets/img/all-images/R-city.pdf#toolbar=1" width="100%" height="100%" style="border:none;">
                   <div class="text-center p-5">
                     <p class="fs-5 text-muted">Your browser does not support inline PDF viewing.</p>
                     <a href="assets/img/all-images/R-city.pdf" target="_blank" class="vl-btn1">Download Layout PDF</a>
@@ -2887,12 +2521,10 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
   <!--===== MASTER PLAN & PDF LAYOUT SECTION ENDS =======-->
 
-  <!--===== DISCOVER RAMAYANA CITY SECTION REMOVED =====-->
 
   <!--===== LOCATION SWIPER STARTS =======-->
   <div id="location" class="location-swiper-section">
@@ -2900,14 +2532,10 @@
       <div class="row">
         <div class="col-lg-8 m-auto text-center">
           <div class="heading2 space-margin60">
-            <span style="color:#C8A22C;font-weight:600;letter-spacing:2px;text-transform:uppercase;">Prime
-              Connectivity</span>
+            <span style="color:#C8A22C;font-weight:600;letter-spacing:2px;text-transform:uppercase;">Prime Connectivity</span>
             <div class="space18"></div>
             <h2>Location Advantages</h2>
-            <p>Strategically situated on NH-56B, Khatola Village, Sarojini Nagar, Lucknow &mdash; seamlessly connected
-              to
-              major expressways, the international airport, leading hospitals, top schools, and vibrant commercial hubs.
-            </p>
+            <p>Strategically situated on NH-56B, Khatola Village, Sarojini Nagar, Lucknow &mdash; seamlessly connected to major expressways, the international airport, leading hospitals, top schools, and vibrant commercial hubs.</p>
           </div>
         </div>
       </div>
@@ -2916,111 +2544,93 @@
         <div class="col-lg-12 position-relative">
           <div class="swiper locationSwiper">
             <div class="swiper-wrapper">
-
-              <!-- 1 -->
               <div class="swiper-slide">
                 <div class="loc-slide-img">
                   <img src="assets/img/all-images/airport.jpg" alt="Airport">
                   <div class="loc-slide-content">
                     <span class="loc-slide-tag">Air</span>
                     <h4>Airport Connectivity</h4>
-                    <p>Chaudhary Charan Singh International Airport &mdash; Easy access for domestic &amp; international
-                      travel.</p>
+                    <p>Chaudhary Charan Singh International Airport &mdash; Easy access for travel.</p>
                   </div>
                 </div>
               </div>
 
-              <!-- 2 -->
               <div class="swiper-slide">
                 <div class="loc-slide-img">
                   <img src="assets/img/all-images/agra-expressway.jpg" alt="Agra Expressway">
                   <div class="loc-slide-content">
                     <span class="loc-slide-tag">Expressway</span>
                     <h4>Agra Expressway</h4>
-                    <p>Fast highway access &mdash; quick travel across Uttar Pradesh &amp; connecting to Delhi-NCR.</p>
+                    <p>Fast highway access &mdash; quick travel across Uttar Pradesh.</p>
                   </div>
                 </div>
               </div>
 
-              <!-- 3 -->
               <div class="swiper-slide">
                 <div class="loc-slide-img">
                   <img src="assets/img/all-images/purvanchal-expressway.jpg" alt="Purvanchal Expressway">
                   <div class="loc-slide-content">
                     <span class="loc-slide-tag">Expressway</span>
                     <h4>Purvanchal Expressway</h4>
-                    <p>Excellent regional access &mdash; positioned within the future growth corridor of eastern U.P.
-                    </p>
+                    <p>Excellent regional access &mdash; positioned within the future growth corridor.</p>
                   </div>
                 </div>
               </div>
 
-              <!-- 4 -->
               <div class="swiper-slide">
                 <div class="loc-slide-img">
                   <img src="assets/img/all-images/railway-station.jpg" alt="Railway Station">
                   <div class="loc-slide-content">
                     <span class="loc-slide-tag">Rail</span>
                     <h4>Railway Station</h4>
-                    <p>Lucknow Railway Station &mdash; seamless rail connectivity for residents and guests.</p>
+                    <p>Lucknow Railway Station &mdash; seamless rail connectivity for residents.</p>
                   </div>
                 </div>
               </div>
 
-              <!-- 5 -->
               <div class="swiper-slide">
                 <div class="loc-slide-img">
                   <img src="assets/img/all-images/hospital.jpg" alt="Hospitals">
                   <div class="loc-slide-content">
                     <span class="loc-slide-tag">Healthcare</span>
                     <h4>Hospitals Nearby</h4>
-                    <p>Leading healthcare centres within minutes &mdash; ensuring quality medical services for all
-                      residents.
-                    </p>
+                    <p>Leading healthcare centres within minutes &mdash; ensuring quality medical services.</p>
                   </div>
                 </div>
               </div>
 
-              <!-- 6 -->
               <div class="swiper-slide">
                 <div class="loc-slide-img">
                   <img src="assets/img/all-images/school.jpg" alt="Schools">
                   <div class="loc-slide-content">
                     <span class="loc-slide-tag">Education</span>
                     <h4>Schools &amp; Colleges</h4>
-                    <p>Top educational institutions within easy reach &mdash; quality education as close as home.</p>
+                    <p>Top educational institutions within easy reach.</p>
                   </div>
                 </div>
               </div>
 
-              <!-- 7 -->
               <div class="swiper-slide">
                 <div class="loc-slide-img">
                   <img src="assets/img/all-images/market.jpg" alt="Markets">
                   <div class="loc-slide-content">
                     <span class="loc-slide-tag">Lifestyle</span>
                     <h4>Shopping &amp; Markets</h4>
-                    <p>Malls, markets &amp; daily essentials &mdash; everything for a comfortable urban lifestyle at
-                      your
-                      doorstep.</p>
+                    <p>Malls, markets &amp; daily essentials at your doorstep.</p>
                   </div>
                 </div>
               </div>
 
-              <!-- 8 -->
               <div class="swiper-slide">
                 <div class="loc-slide-img">
                   <img src="assets/img/all-images/highway.jpg" alt="NH-56B">
                   <div class="loc-slide-content">
                     <span class="loc-slide-tag">Highway</span>
                     <h4>NH-56B Frontage</h4>
-                    <p>Khatola Village, Sarojini Nagar &mdash; prime highway-front investment location with proposed
-                      arterial
-                      link road.</p>
+                    <p>Khatola Village, Sarojini Nagar &mdash; prime highway-front investment location.</p>
                   </div>
                 </div>
               </div>
-
             </div>
             <div class="swiper-pagination location-pagination"></div>
           </div>
@@ -3028,400 +2638,121 @@
           <div class="swiper-button-next location-nav-btn"><i class="fa-solid fa-chevron-right"></i></div>
         </div>
       </div>
-
-      <div class="row">
-        <div class="col-lg-12 text-center mt-4">
-          <a href="index.html#location" class="vl-btn1">
-            View Location Map
-            <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span>
-            <span class="arrow2"><i class="fa-solid fa-arrow-right"></i></span>
-          </a>
-        </div>
-      </div>
-
     </div>
   </div>
   <!--===== LOCATION SWIPER ENDS =======-->
-
-  <!-- OLD LOCATION SECTION (REPLACED) -->
-  <!-- REMOVED testi4 location block -->
-  <!-- START PLACEHOLDER TO SKIP OLD BLOCK -->
-  <div id="location-placeholder" style="display:none;">
-
-
-    <div class="container">
-
-      <div class="row">
-        <div class="col-lg-8 m-auto text-center">
-          <div class="heading2 space-margin60">
-
-            <span style="color:#C8A22C;font-weight:600;letter-spacing:2px;text-transform:uppercase;">
-              Prime Connectivity
-            </span>
-
-            <div class="space18"></div>
-
-            <h2>Location Advantages</h2>
-
-            <p>
-              Strategically located on NH-56B, Khatola Village, Sarojini Nagar,
-              Lucknow, Ramayana City offers seamless connectivity to major
-              highways, airport, railway station, educational institutions,
-              hospitals, and commercial hubs.
-            </p>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12">
-
-          <div class="testi-main-area">
-
-            <div class="testimonial4-slider-box">
-
-              <!-- 1 -->
-              <div class="testimonial-single-boxarea">
-                <a href="#" class="section-s">
-                  <img src="assets/img/all-images/lucknow Airport.jpg" alt="">
-                  <h4>Airport Connectivity</h4>
-                  <p>Destination : <span>Chaudhary Charan Singh Airport</span></p>
-                  <p>Benefit : <span>Easy Access for Domestic & International Travel</span></p>
-                </a>
-              </div>
-
-              <!-- 2 -->
-              <div class="testimonial-single-boxarea">
-                <a href="#" class="section-s">
-                  <img src="assets/img/all-images/AgraExpressway.jpg" alt="">
-                  <h4>Agra Expressway</h4>
-                  <p>Connectivity : <span>Fast Highway Access</span></p>
-                  <p>Benefit : <span>Quick Travel Across Uttar Pradesh</span></p>
-                </a>
-              </div>
-
-              <!-- 3 -->
-              <div class="testimonial-single-boxarea">
-                <a href="#" class="section-s">
-                  <img src="assets/img/all-images/PurvancalExpress.JPG" alt="">
-                  <h4>Purvanchal Expressway</h4>
-                  <p>Connectivity : <span>Excellent Regional Access</span></p>
-                  <p>Benefit : <span>Future Growth Corridor</span></p>
-                </a>
-              </div>
-
-              <!-- 4 -->
-              <div class="testimonial-single-boxarea">
-                <a href="#" class="section-s">
-                  <img src="assets/img/all-images/Station.jpg" alt="">
-                  <h4>Railway Station</h4>
-                  <p>Destination : <span>Lucknow Railway Station</span></p>
-                  <p>Benefit : <span>Convenient Rail Connectivity</span></p>
-                </a>
-              </div>
-
-              <!-- 5 -->
-              <div class="testimonial-single-boxarea">
-                <a href="#" class="section-s">
-                  <img src="assets/img/all-images/Hospital.jfif" alt="">
-                  <h4>Hospitals Nearby</h4>
-                  <p>Facilities : <span>Leading Healthcare Centers</span></p>
-                  <p>Benefit : <span>Quality Medical Services Nearby</span></p>
-                </a>
-              </div>
-
-              <!-- 6 -->
-              <div class="testimonial-single-boxarea">
-                <a href="#" class="section-s">
-                  <img src="assets/img/all-images/school.jpg" alt="">
-                  <h4>Schools & Colleges</h4>
-                  <p>Facilities : <span>Top Educational Institutions</span></p>
-                  <p>Benefit : <span>Quality Education Within Easy Reach</span></p>
-                </a>
-              </div>
-
-              <!-- 7 -->
-              <div class="testimonial-single-boxarea">
-                <a href="#" class="section-s">
-                  <img src="assets/img/all-images/market.jpg" alt="">
-                  <h4>Shopping & Markets</h4>
-                  <p>Nearby : <span>Malls & Daily Essentials</span></p>
-                  <p>Benefit : <span>Comfortable Urban Lifestyle</span></p>
-                </a>
-              </div>
-
-              <!-- 8 -->
-              <div class="testimonial-single-boxarea">
-                <a href="#" class="section-s">
-                  <img src="assets/img/all-images/highway.jpg" alt="">
-                  <h4>NH-56B Frontage</h4>
-                  <p>Location : <span>Khatola Village, Sarojini Nagar</span></p>
-                  <p>Benefit : <span>Prime Investment Location</span></p>
-                </a>
-              </div>
-
-            </div>
-
-            <div class="testimonial-arrows">
-              <div class="testimonial-prev-arrow">
-                <button><i class="fa-solid fa-angle-left"></i></button>
-              </div>
-
-              <div class="testimonial-next-arrow">
-                <button><i class="fa-solid fa-angle-right"></i></button>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12 text-center mt-4">
-          <a href="index.html#location" class="vl-btn1">
-            View Location Map
-            <span class="arrow1">
-              <i class="fa-solid fa-arrow-right"></i>
-            </span>
-            <span class="arrow2">
-              <i class="fa-solid fa-arrow-right"></i>
-            </span>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div><!-- END OLD LOCATION PLACEHOLDER -->
-  <!--===== PROPERTIES AREA ENDS =======-->
 
 
   <!--===== SITE VISIT AREA STARTS =======-->
   <div class="testi2 sp1" style="background:#ffffff;">
     <div class="container">
       <div class="row align-items-center">
-
-        <!-- Left Image -->
         <div class="col-lg-6">
           <div class="testi-img image-anime reveal">
             <img src="assets/img/all-images/Ramayana_city (3).png" alt="Ramayana City">
           </div>
         </div>
 
-        <!-- Right Content -->
         <div class="col-lg-6">
-
           <div class="heading1">
-
             <h5 style="color:#C8A22C;">Book Your Site Visit</h5>
-
             <div class="space16"></div>
-
             <h2>
               Experience the Divine Lifestyle at
               <span style="color:#C8A22C;">Ramayana City</span>
             </h2>
-
             <div class="space20"></div>
-
             <p>
               Visit Ramayana City to explore an exclusive, premium township where spirituality harmonizes with
               modern luxury. Tour our bespoke plot dimensions, grand 35-meter wide boulevard, and lush botanical green
               belts with our project experts.
             </p>
-
             <div class="space30"></div>
 
             <div class="row">
-
               <div class="col-md-6 mb-3">
-                <div class="d-flex align-items-center">
-                  <i class="fa-solid fa-circle-check text-warning me-2"></i>
-                  Guided Site Tour
-                </div>
+                <div class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-warning me-2"></i> Guided Site Tour</div>
               </div>
-
               <div class="col-md-6 mb-3">
-                <div class="d-flex align-items-center">
-                  <i class="fa-solid fa-circle-check text-warning me-2"></i>
-                  Premium Residential Plots
-                </div>
+                <div class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-warning me-2"></i> Premium Residential Plots</div>
               </div>
-
               <div class="col-md-6 mb-3">
-                <div class="d-flex align-items-center">
-                  <i class="fa-solid fa-circle-check text-warning me-2"></i>
-                  Prime NH-56B Location
-                </div>
+                <div class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-warning me-2"></i> Prime NH-56B Location</div>
               </div>
-
               <div class="col-md-6 mb-3">
-                <div class="d-flex align-items-center">
-                  <i class="fa-solid fa-circle-check text-warning me-2"></i>
-                  Gated Community
-                </div>
+                <div class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-warning me-2"></i> Gated Community</div>
               </div>
-
-              <div class="col-md-6 mb-3">
-                <div class="d-flex align-items-center">
-                  <i class="fa-solid fa-circle-check text-warning me-2"></i>
-                  Green Environment
-                </div>
-              </div>
-
-              <div class="col-md-6 mb-3">
-                <div class="d-flex align-items-center">
-                  <i class="fa-solid fa-circle-check text-warning me-2"></i>
-                  Easy Booking Assistance
-                </div>
-              </div>
-
             </div>
 
             <div class="space32"></div>
-
             <div class="btn-area1">
-
               <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#enquiryModal" class="vl-btn1">
                 Book Site Visit
-                <span class="arrow1">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </span>
-                <span class="arrow2">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </span>
+                <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span>
+                <span class="arrow2"><i class="fa-solid fa-arrow-right"></i></span>
               </a>
-
               <a href="tel:+918882125125" class="vl-btn2 ms-3">
-                <i class="fa-solid fa-phone"></i>
-                Call Now
+                <i class="fa-solid fa-phone"></i> Call Now
               </a>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
     </div>
   </div>
   <!--===== SITE VISIT AREA ENDS =======-->
 
 
-
   <!--===== BOOK SITE VISIT AREA START =======-->
-  <div class=" py-5">
+  <div class="py-5" style="background: #F4F2EC;">
     <div class="container">
-
       <div class="row align-items-center">
-
-        <!-- Left Content -->
         <div class="col-lg-6 mb-5 mb-lg-0">
-
           <span class="badge px-4 py-2 mb-3" style="background:#C8A22C;color:#fff;font-size:15px;">
             Premium Township
           </span>
-
           <h2 class="mb-4">
             Book Your <span style="color:#C8A22C;">Free Site Visit</span>
           </h2>
-
           <p class="mb-4">
             Discover Ramayana City &mdash; a premier gated township where modern living and timeless spiritual values
-            seamlessly come together. Book a visit with our experts to explore bespoke plot dimensions, inspect the
-            17-meter botanical green belt, and experience the serenity of the estate firsthand.
+            seamlessly come together. Book a visit with our experts to explore plot dimensions, inspect the
+            17-meter botanical green belt, and experience the serenity firsthand.
           </p>
 
           <div class="row">
-
             <div class="col-md-6 mb-3">
-              <div class="d-flex align-items-center">
-                <i class="fa-solid fa-circle-check text-warning fs-5 me-3"></i>
-                Premium Residential Plots
-              </div>
+              <div class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-warning fs-5 me-3"></i> Premium Plots</div>
             </div>
-
             <div class="col-md-6 mb-3">
-              <div class="d-flex align-items-center">
-                <i class="fa-solid fa-circle-check text-warning fs-5 me-3"></i>
-                Ram Temple Township
-              </div>
+              <div class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-warning fs-5 me-3"></i> Ram Temple Township</div>
             </div>
-
             <div class="col-md-6 mb-3">
-              <div class="d-flex align-items-center">
-                <i class="fa-solid fa-circle-check text-warning fs-5 me-3"></i>
-                NH-56B Prime Location
-              </div>
+              <div class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-warning fs-5 me-3"></i> NH-56B Prime Location</div>
             </div>
-
             <div class="col-md-6 mb-3">
-              <div class="d-flex align-items-center">
-                <i class="fa-solid fa-circle-check text-warning fs-5 me-3"></i>
-                Free Site Visit
-              </div>
+              <div class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-warning fs-5 me-3"></i> Free Site Visit</div>
             </div>
-
           </div>
-
-          <div class="mt-4 d-flex flex-wrap">
-
-            <div class="me-4 mb-3">
-              <h3 style="color:#C8A22C;">100%</h3>
-              <small>Secure Investment</small>
-            </div>
-
-            <div class="me-4 mb-3">
-              <h3 style="color:#C8A22C;">Prime</h3>
-              <small>Location</small>
-            </div>
-
-            <div class="mb-3">
-              <h3 style="color:#C8A22C;">Future</h3>
-              <small>High Appreciation</small>
-            </div>
-
-          </div>
-
-          <img src="assets/img/logo/logo1.png" class="img-fluid mt-4 rounded-4"
-            style="max-width: 240px; opacity: 0.95; display: block;" alt="Ramayana City">
-
         </div>
 
-        <!-- Right Form -->
         <div class="col-lg-6">
-
           <div class="contact-boxarea shadow-lg rounded-4 p-4" style="background:#fff;">
-
             <div class="bg-area">
+              <h3 class="mb-2">Book Site Visit</h3>
+              <p class="mb-4">Fill your details and our property consultant will contact you shortly.</p>
 
-              <h3 class="mb-2">
-                Book Site Visit
-              </h3>
-
-              <p class="mb-4">
-                Fill your details and our property consultant
-                will contact you shortly.
-              </p>
-
-              <form>
-
+              <form onsubmit="event.preventDefault(); alert('Thank you! Our executive will contact you shortly.');">
                 <div class="row">
-
                   <div class="col-md-6 mb-3">
-                    <input type="text" class="form-control" placeholder="Full Name">
+                    <input type="text" class="form-control" placeholder="Full Name" required>
                   </div>
-
                   <div class="col-md-6 mb-3">
-                    <input type="text" class="form-control" placeholder="Mobile Number">
+                    <input type="tel" class="form-control" placeholder="Mobile Number" required>
                   </div>
-
                   <div class="col-md-6 mb-3">
                     <input type="email" class="form-control" placeholder="Email Address">
                   </div>
-
                   <div class="col-md-6 mb-3">
                     <select class="form-select">
                       <option>Select Plot Type</option>
@@ -3431,7 +2762,6 @@
                       <option>Commercial Plot</option>
                     </select>
                   </div>
-
                   <div class="col-md-12 mb-3">
                     <select class="form-select">
                       <option>Select Budget</option>
@@ -3441,66 +2771,53 @@
                       <option>Above 60 Lakh</option>
                     </select>
                   </div>
-
                   <div class="col-md-12 mb-3">
-                    <textarea class="form-control" rows="5" placeholder="Write Your Message"></textarea>
+                    <textarea class="form-control" rows="3" placeholder="Write Your Message"></textarea>
                   </div>
-
                   <div class="col-md-12">
-                    <button type="submit" class="contact-form-btn w-100">
+                    <button type="submit" class="contact-form-btn w-100 btn btn-warning py-3 text-dark fw-bold" style="background: linear-gradient(135deg, #C9A84C 0%, #E8D08A 100%); border:none;">
                       Book Free Site Visit
                     </button>
                   </div>
-
                 </div>
-
               </form>
 
               <hr>
 
               <div class="row text-center">
-
                 <div class="col-4">
                   <a href="tel:+918882125125" class="contact-bottom-link">
                     <i class="fa-solid fa-phone fs-3 text-warning"></i>
                     <p class="mt-2 mb-0">Call Us</p>
                   </a>
                 </div>
-
                 <div class="col-4">
-                  <a href="https://wa.me/918882125125?text=Hello%2C%20I%20am%20interested%20in%20Ramayana%20City%20plots"
-                    target="_blank" class="contact-bottom-link">
+                  <a href="https://wa.me/918882125125?text=Hello%2C%20I%20am%20interested%20in%20Ramayana%20City%20plots" target="_blank" class="contact-bottom-link">
                     <i class="fa-brands fa-whatsapp fs-3 text-success"></i>
                     <p class="mt-2 mb-0">WhatsApp</p>
                   </a>
                 </div>
-
                 <div class="col-4">
-                  <a href="index.html#location" class="contact-bottom-link">
+                  <a href="#location" class="contact-bottom-link">
                     <i class="fa-solid fa-location-dot fs-3 text-warning"></i>
                     <p class="mt-2 mb-0">Location</p>
                   </a>
                 </div>
-
               </div>
 
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
   </div>
   <!--===== BOOK SITE VISIT AREA END =======-->
-
 
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3565.412658582609!2d80.8998517!3d26.6672817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bf10019d7ac87%3A0xba27bf0ade4cab2d!2sRamayana%20City!5e0!3m2!1sen!2sin!4v1784024762269!5m2!1sen!2sin"
     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
     referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
   <!--===== FOOTER AREA STARTS =======-->
   <div class="footer-cta2-bg-area">
     <div class="vl-footer2-section-area">
@@ -3508,71 +2825,34 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
             <div class="footer-time-area">
-
               <img src="assets/img/logo/logo1.png" alt="Ramayana City Logo">
-
               <div class="space24"></div>
-
               <p>
                 Ramayana City is a premium residential township located on NH-56B,
                 Sarojini Nagar, Lucknow. Experience a peaceful lifestyle where
                 spirituality, greenery, and modern infrastructure come together.
               </p>
-
               <div class="space24"></div>
-
               <ul>
-
-                <li>
-                  <a href="https://www.facebook.com/profile.php?id=61575721407051" target="_blank">
-                    <i class="fa-brands fa-facebook-f"></i>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <i class="fa-brands fa-instagram"></i>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <i class="fa-brands fa-youtube"></i>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                  </a>
-                </li>
-
+                <li><a href="https://www.facebook.com/profile.php?id=61575721407051" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
               </ul>
-
             </div>
           </div>
           <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
             <div class="footer-widget-area">
               <h3>Quick Links</h3>
-
               <ul class="footer-section">
-
                 <li><a href="index.html">Home</a></li>
-
                 <li><a href="about-us.html">About Ramayana City</a></li>
-
                 <li><a href="index.html#amenities">Amenities</a></li>
-
                 <li><a href="index.html#location">Location Advantages</a></li>
-
                 <li><a href="gallery.html">Gallery</a></li>
-
                 <li><a href="contact.html">Contact Us</a></li>
-
               </ul>
-
             </div>
-
           </div>
           <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
             <div class="footer-widget-area">
@@ -3594,41 +2874,31 @@
                 <li>
                   <div class="footer-contact-item">
                     <i class="fa-solid fa-phone"></i>
-                    <div>
-                      <a href="tel:+918882125125">+91-8882125125</a>
-                    </div>
+                    <div><a href="tel:+918882125125">+91-8882125125</a></div>
                   </div>
                 </li>
                 <li>
                   <div class="footer-contact-item">
                     <i class="fa-solid fa-envelope"></i>
-                    <div>
-                      <a href="mailto:info@ramayanacity.com">info@ramayanacity.com</a>
-                    </div>
+                    <div><a href="mailto:info@ramayanacity.com">info@ramayanacity.com</a></div>
                   </div>
                 </li>
                 <li>
                   <div class="footer-contact-item">
                     <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                      <strong>Site Address:</strong> NH-56B, Khatola Village, Sarojini Nagar, Lucknow, U.P.
-                    </div>
+                    <div><strong>Site Address:</strong> NH-56B, Khatola Village, Sarojini Nagar, Lucknow, U.P.</div>
                   </div>
                 </li>
                 <li>
                   <div class="footer-contact-item">
                     <i class="fa-solid fa-building"></i>
-                    <div>
-                      <strong>Office Address:</strong> 309, 3rd Floor, Felix Square, Sushant Golf City, Lucknow - 226030
-                    </div>
+                    <div><strong>Office Address:</strong> 309, 3rd Floor, Felix Square, Sushant Golf City, Lucknow - 226030</div>
                   </div>
                 </li>
                 <li>
                   <div class="footer-contact-item">
                     <i class="fa-solid fa-clock"></i>
-                    <div>
-                      <strong>Working Hours:</strong> Mon&ndash;Sun : 9:00 AM &ndash; 7:00 PM
-                    </div>
+                    <div><strong>Working Hours:</strong> Mon&ndash;Sun : 9:00 AM &ndash; 7:00 PM</div>
                   </div>
                 </li>
               </ul>
@@ -3638,39 +2908,14 @@
         <div class="space24"></div>
         <div class="col-lg-12">
           <div class="copyright-area">
-
-            <p>
-              &copy; 2026 <strong>Ramayana City</strong>. All Rights Reserved.
-            </p>
-
+            <p>&copy; 2026 <strong>Ramayana City</strong>. All Rights Reserved.</p>
             <ul>
-
-              <li>
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <span> | </span>
-              </li>
-
-              <li>
-                <a href="terms-conditions.html">Terms &amp; Conditions</a>
-                <span> | </span>
-              </li>
-
-              <li>
-                <a href="disclaimer.html">Disclaimer</a>
-                <span> | </span>
-              </li>
-
-              <li>
-                <a href="sitemap.html">Sitemap</a>
-                <span> | </span>
-              </li>
-
-              <li>
-                <a href="rera.html">RERA</a>
-              </li>
-
+              <li><a href="privacy-policy.html">Privacy Policy</a><span> | </span></li>
+              <li><a href="terms-conditions.html">Terms &amp; Conditions</a><span> | </span></li>
+              <li><a href="disclaimer.html">Disclaimer</a><span> | </span></li>
+              <li><a href="sitemap.html">Sitemap</a><span> | </span></li>
+              <li><a href="rera.html">RERA</a></li>
             </ul>
-
           </div>
         </div>
       </div>
@@ -3679,143 +2924,6 @@
   <!--===== FOOTER AREA ENDS =======-->
 
 
-
-
-
-  <!--===== JS SCRIPT LINK =======-->
-  <script src="assets/js/plugins/jquery-3-7-1.min.js"></script>
-  <script src="assets/js/plugins/bootstrap.min.js"></script>
-  <script src="assets/js/plugins/fontawesome.js"></script>
-  <script src="assets/js/plugins/aos.js"></script>
-  <script src="assets/js/plugins/jquery.appear.js"></script>
-  <script src="assets/js/plugins/jquery.odometer.min.js"></script>
-  <script src="assets/js/plugins/chart.js"></script>
-  <script src="assets/js/plugins/gsap.min.js"></script>
-  <script src="assets/js/plugins/ScrollTrigger.min.js"></script>
-  <script src="assets/js/plugins/textSplite-custom.js"></script>
-  <script src="assets/js/plugins/sidebar.js"></script>
-  <script src="assets/js/plugins/swiper-slider.js"></script>
-  <script src="assets/js/plugins/magnific-popup.js"></script>
-  <script src="assets/js/plugins/mobilemenu.js"></script>
-  <script src="assets/js/plugins/owlcarousel.min.js"></script>
-
-  <script src="assets/js/plugins/waypoints.js"></script>
-  <script src="assets/js/plugins/slick-slider.js"></script>
-  <script src="assets/js/plugins/circle-progress.js"></script>
-  <script src="assets/js/main.js"></script>
-
-  <script>
-    $(window).on("scroll", function () {
-      if ($(this).scrollTop() > 50) {
-        $("#vl-header-sticky").addClass("is-sticky");
-      } else {
-        $("#vl-header-sticky").removeClass("is-sticky");
-      }
-    });
-  </script>
-  <script>
-    $('.listing-slider-area').owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      dots: false,
-      autoplay: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        576: {
-          items: 2
-        },
-        992: {
-          items: 3
-        },
-        1200: {
-          items: 4
-        }
-      }
-    });
-
-  </script>
-  <script>
-    var swiper = new Swiper('.testimonial-swiper', {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      loop: true,
-      navigation: {
-        nextEl: '.testimonial-next-arrow',
-        prevEl: '.testimonial-prev-arrow',
-      },
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        480: { slidesPerView: 1 }
-      }
-    });
-
-    var amenitiesSwiper = new Swiper('.amenitiesSwiper', {
-      slidesPerView: 'auto',
-      spaceBetween: 30,
-      centeredSlides: true,
-      loop: true,
-      speed: 1000,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.amenity-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.amenity-next',
-        prevEl: '.amenity-prev',
-      },
-    });
-
-    // Location Swiper
-    var locationSwiper = new Swiper('.locationSwiper', {
-      slidesPerView: 3,
-      spaceBetween: 24,
-      loop: true,
-      speed: 900,
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.location-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next.location-nav-btn',
-        prevEl: '.swiper-button-prev.location-nav-btn',
-      },
-      breakpoints: {
-        0: { slidesPerView: 1, spaceBetween: 16 },
-        768: { slidesPerView: 2, spaceBetween: 20 },
-        1200: { slidesPerView: 3, spaceBetween: 24 }
-      }
-    });
-
-    // Master Plan Lightbox
-    $('.masterplan-popup').magnificPopup({
-      type: 'image',
-      closeBtnInside: false,
-      closeOnContentClick: true,
-      midClick: true,
-      image: {
-        verticalFit: true
-      },
-      zoom: {
-        enabled: true,
-        duration: 300,
-        opener: function (element) {
-          return element.find('img');
-        }
-      }
-    });
-  </script>
-  <!-- Enquiry Modal -->
   <!-- Enquiry Modal -->
   <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -3826,7 +2934,6 @@
           </button>
 
           <div class="row g-0">
-            <!-- Left Side Image Showcase -->
             <div class="col-md-5 d-none d-md-block position-relative"
               style="background: url('assets/img/all-images/about_ramayana_city.png') no-repeat center center; background-size: cover; min-height: 520px;">
               <div class="w-100 h-100 d-flex flex-column justify-content-between p-4"
@@ -3837,8 +2944,7 @@
                   </span>
                 </div>
                 <div>
-                  <h3 class="text-white font-weight-bold mb-1" style="font-size: 26px; font-weight: 800;">Ramayana City
-                  </h3>
+                  <h3 class="text-white font-weight-bold mb-1" style="font-size: 26px; font-weight: 800;">Ramayana City</h3>
                   <p class="text-warning mb-3" style="font-size: 13px; font-weight: 600;">
                     <i class="fa-solid fa-location-dot me-1"></i> NH-56B, Sarojini Nagar, Lucknow
                   </p>
@@ -3850,13 +2956,11 @@
               </div>
             </div>
 
-            <!-- Right Side Luxury Form -->
             <div class="col-md-7 col-12 p-4 p-lg-5" style="background: #ffffff;">
               <div class="mb-3">
                 <span class="gold-subtitle"><i class="fa-solid fa-sparkles me-1"></i> GET IN TOUCH</span>
                 <h3 class="modal-form-title">Quick Enquiry</h3>
-                <p class="modal-form-desc">Fill in your details below. Our senior relationship manager will contact you
-                  shortly with direct price list.</p>
+                <p class="modal-form-desc">Fill in your details below. Our senior relationship manager will contact you shortly with direct price list.</p>
               </div>
 
               <form id="modalEnquiryForm"
@@ -3909,8 +3013,83 @@
       </div>
     </div>
   </div>
-  </div>
-  </div>
+
+  <!--===== JS SCRIPT LINK =======-->
+  <script src="assets/js/plugins/jquery-3-7-1.min.js"></script>
+  <script src="assets/js/plugins/bootstrap.min.js"></script>
+  <script src="assets/js/plugins/fontawesome.js"></script>
+  <script src="assets/js/plugins/aos.js"></script>
+  <script src="assets/js/plugins/jquery.appear.js"></script>
+  <script src="assets/js/plugins/jquery.odometer.min.js"></script>
+  <script src="assets/js/plugins/chart.js"></script>
+  <script src="assets/js/plugins/gsap.min.js"></script>
+  <script src="assets/js/plugins/ScrollTrigger.min.js"></script>
+  <script src="assets/js/plugins/textSplite-custom.js"></script>
+  <script src="assets/js/plugins/sidebar.js"></script>
+  <script src="assets/js/plugins/swiper-slider.js"></script>
+  <script src="assets/js/plugins/magnific-popup.js"></script>
+  <script src="assets/js/plugins/mobilemenu.js"></script>
+  <script src="assets/js/plugins/owlcarousel.min.js"></script>
+  <script src="assets/js/plugins/waypoints.js"></script>
+  <script src="assets/js/plugins/slick-slider.js"></script>
+  <script src="assets/js/plugins/circle-progress.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    $(window).on("scroll", function () {
+      if ($(this).scrollTop() > 50) {
+        $("#vl-header-sticky").addClass("is-sticky");
+      } else {
+        $("#vl-header-sticky").removeClass("is-sticky");
+      }
+    });
+  </script>
+  
+  <script>
+    var amenitiesSwiper = new Swiper('.amenitiesSwiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true,
+      speed: 1000,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.amenity-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.amenity-next',
+        prevEl: '.amenity-prev',
+      },
+    });
+
+    var locationSwiper = new Swiper('.locationSwiper', {
+      slidesPerView: 3,
+      spaceBetween: 24,
+      loop: true,
+      speed: 900,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.location-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next.location-nav-btn',
+        prevEl: '.swiper-button-prev.location-nav-btn',
+      },
+      breakpoints: {
+        0: { slidesPerView: 1, spaceBetween: 16 },
+        768: { slidesPerView: 2, spaceBetween: 20 },
+        1200: { slidesPerView: 3, spaceBetween: 24 }
+      }
+    });
+  </script>
 </body>
 
 </html>
